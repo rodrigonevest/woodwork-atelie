@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}WoodWork Design - Atilê da Madeira{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+
+<section class="bg-light py-5">   
+
+    <div class="container text-center">
+        
+        <div class="d-flex justify-content-center align-items-center mb-3">
+            <img src="{% static 'images/caricatura.png' %}"
+                alt="Logo"
+                class="me-3"
+                width="75">
+
+            <h1 class="font-logo">Maikon Ateliê da Madeira</h1>
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="{% static 'images/carrosel1.jpg' %}" class="d-block w-100 carousel-img" alt="carrosel_1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p class="carousel-text">
+                                    Tábuas artesanais para quem valoriza o churrasco de verdade.
+                            </p>
+                        </div>
+                </div>
+                <div class="carousel-item">
+                <img src="{% static 'images/carrosel2.jpg' %}" class="d-block w-100 carousel-img" alt="carrosel_2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="carousel-text">
+                            Cada detalhe feito à mão.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                <img src=".{% static 'images/carrosel3.jpg' %}" class="d-block w-100 carousel-img" alt="carrosel_3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p class="carousel-text">
+                            Presente nas melhores histórias
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>       
+        
+        <a href="{% url 'portfolio' %}" class="btn-portifolio btn btn-dark btn-lg">
+            Ver Portfólio
+        </a>
+    </div>
+
+    
+</section>
+
+<section class="container py-5">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h5>Produção artesanal</h5>
+            <p>Cada peça é feita com cuidado e atenção aos detalhes.</p>
+        </div>
+        <div class="col-md-4">
+            <h5>Madeiras nobres</h5>
+            <p>Seleção rigorosa para garantir beleza e durabilidade.</p>
+        </div>
+        <div class="col-md-4">
+            <h5>Acabamento premium</h5>
+            <p>Design pensado para uso real no churrasco.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
