@@ -1,20 +1,18 @@
 {
   "builds": [
     {
-      "src": "datafam/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "100mb",
-        "runtime": "python3.12"
-      }
-    },
-    {
-      "src": "static/*/",
-      "use": "@vercel/static"
+      "src": "core/wsgi.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
-    { "src": "/static/(.*)", "dest": "/static/$1" },
-    { "src": "/(.*)", "dest": "datafam/wsgi.py" }
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "core/wsgi.py"
+    }
   ]
 }
